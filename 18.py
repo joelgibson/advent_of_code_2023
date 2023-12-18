@@ -43,9 +43,9 @@ def area(moves: list[tuple[int, int]]) -> int:
     integral = 0
     length = 0
     for dx, dy in moves:
-        x, y = x + dx, y + dy
         integral += x * dy
         length += abs(dx) + abs(dy)
+        x, y = x + dx, y + dy
     
     return abs(integral) + length // 2 + 1
 
